@@ -1,0 +1,91 @@
+/* تنسيق الحاوية الرئيسية للهيدر */
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color:black; /* لون أمازون الداكن */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 20px;
+}
+
+/* تنسيق شعار الموقع */
+.header-logo {
+  width: 120px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+/* حاوية شريط البحث الممتدة */
+.header-search {
+  display: flex;
+  flex: 1; /* تجعل مربع البحث يأخذ المساحة المتبقية بالكامل */
+  align-items: center;
+  border-radius: 24px;
+}
+
+/* صندوق الإدخال النصي للبحث */
+.header-searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+/* أيقونة البحث (العدسة) */
+.header-searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042; /* اللون الأصفر المائل للبرتقالي للزر */
+}
+
+/* حاوية الأزرار والقوائم اليمنى */
+.header-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* تنسيق الخيار أو الزر الواحد */
+.header-option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+/* السطر الأول داخل الخيار (نص صغير رمادي) */
+.header-optionLineOne {
+  font-size: 10px;
+  color: #ccc;
+}
+
+/* السطر الثاني داخل الخيار (نص عريض وأكبر) */
+.header-optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+/* حاوية أيقونة السلة والعداد معاً */
+.header-optionBasket {
+  display: flex;
+  align-items: center; /* محاذاة الأيقونة والعداد عمودياً على نفس الخط */
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* تنسيق صورة أو أيقونة السلة */
+.header-optionBasket img {
+  width: 30px; /* حجم مناسب لأيقونة السلة */
+  object-fit: contain;
+}
+
+/* تنسيق عداد المنتجات داخل السلة */
+.header-basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #f08804; /* اللون البرتقالي المميز لعداد أمازون */
+}

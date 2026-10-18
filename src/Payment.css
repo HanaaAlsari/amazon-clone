@@ -1,0 +1,119 @@
+/* الحاوية الرئيسية لصفحة الدفع */
+.payment {
+  background-color: white;
+}
+
+/* الحاوية الداخلية وضبط العناوين الرئيسية */
+.payment-container > h1 {
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  background-color: #eaeded; /* خلفية رمادية خفيفة لعنوان الصفحة */
+  border-bottom: 1px solid rgb(221, 221, 221);
+  font-size: 24px;
+}
+
+/* إزالة التنسيق الافتراضي عن رابط الرجوع للسلة داخل العنوان */
+.payment-container > h1 a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+
+/* التنسيق العام لكل قسم من أقسام الدفع (العنوان، المنتجات) */
+.payment-section {
+  display: flex;
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+/* العناوين الجانبية للأقسام (مثل Delivery Address أو Review items) */
+.payment-title {
+  flex: 0.2; /* تأخذ 20% من عرض السطر */
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* محتوى عنوان التوصيل */
+.payment-address {
+  flex: 0.8; /* يأخذ باقي مساحة السطر (80%) */
+}
+
+.payment-address > p {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* حاوية قائمة المنتجات المراد مراجعتها */
+.payment-items {
+  flex: 0.8; /* تأخذ 80% من عرض السطر لتصطف بجانب العنوان */
+}
+
+/* ملاحظة: بما أنك تستخدم مكون NumericFormat أو مكون مخصص للمنتج داخل الخريطة (map)، 
+   يفضل إضافة مسافة تفصل بين كل منتج والآخر في القائمة */
+.payment-items > * {
+  margin-bottom: 20px;
+}
+
+/* تنسيق متجاوب للشاشات الصغيرة (الهواتف) تحول التقسيم من أفقي إلى عمودي */
+@media (max-width: 768px) {
+  .payment-section {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+  
+  .payment-title {
+    margin-bottom: 10px;
+  }
+}
+/* تنسيق قسم الدفع النهائي (الحاوية التي تحوي المجموع والزر) */
+.payment-section:last-of-type {
+  flex-direction: column; /* ترتيب المجموع والزر عمودياً فوق بعضهما */
+  align-items: flex-start;
+  background-color: #fcfcfc; /* خلفية مميزة قليلاً لقسم الدفع */
+  padding: 30px;
+}
+
+/* تنسيق نص إجمالي الطلب (Order Total) */
+.payment-section h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* زر الدفع النهائي (Buy now) */
+.payment-section button {
+  background: #f0c14b; /* اللون الأصفر المميز لأمازون */
+  border-radius: 3px;
+  width: 100%;
+  max-width: 400px; /* تحديد أقصى عرض للزر لكي لا يتمدد بشكل مفرط في الشاشات الواسعة */
+  height: 40px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* تأثير تمرير الفأرة على زر الشراء */
+.payment-section button:hover {
+  background: #ddb347; /* يصبح اللون أغمق قليلاً عند التمرير */
+}
+
+/* تأثير الضغط على الزر */
+.payment-section button:active {
+  background: #c8a13c;
+  border-color: #846a29;
+}
+
+/* زر معطل (في حال كنت ستقوم بتعطيله أثناء عملية المعالجة لاحقاً) */
+.payment-section button:disabled {
+  background: #dddddd;
+  border-color: #cccccc;
+  color: #999999;
+  cursor: not-allowed;
+}

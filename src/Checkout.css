@@ -1,0 +1,47 @@
+/* الحاوية الرئيسية لصفحة الدفع */
+.checkout {
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+}
+
+/* القسم الأيسر (يحتوي على العنوان وقائمة المنتجات) */
+.checkout__left {
+  flex: 1; /* يأخذ المساحة الأكبر من الصفحة تلقائياً */
+  margin-right: 20px;
+}
+
+/* الإعلان العلوي في حال قمت بإلغاء الكومنت عنه مستقبلاً */
+.checkout__ad {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* عنوان سلة المشتريات الرئيسي */
+.checkout__title {
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray; /* خط فاصل رمادي أنيق أسفل العنوان */
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* نص رسالة السلة الفارغة */
+.checkout__left > div > p {
+  font-size: 15px;
+  padding: 20px 10px;
+  color: #565959;
+}
+
+/* القسم الأيمن (يحتوي على مكون المجموع الكلي الحسابي Subtotal) */
+.checkout__right {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* حجم ثابت ومناسب لبطاقة الحساب الجانبية */
+  height: max-content;
+  padding: 20px;
+  background-color: #f3f3f3; /* خلفية رمادية فاتحة لتمييز البطاقة */
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}

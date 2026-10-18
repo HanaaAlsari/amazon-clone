@@ -1,0 +1,67 @@
+/* الحاوية الرئيسية للمنتج الواحد داخل السلة */
+.checkoutProduct {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f3f3f3; /* خط فاصل خفيف بين كل منتج والآخر */
+  padding-bottom: 20px;
+}
+
+/* تنسيق صورة المنتج داخل السلة */
+.checkoutProduct-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain; /* يحافظ على أبعاد الصورة بدون تشويه */
+}
+
+/* حاوية المعلومات النصية والزر */
+.checkoutProduct-info {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* عنوان المنتج */
+.checkoutProduct-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+/* السعر */
+.checkoutProduct-price {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* حاوية النجوم لكي تصطف أفقياً */
+.checkoutProduct-rating {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+/* التحكم بحجم النجوم لمنع ظهورها بحجم ضخم */
+.checkoutProduct-rating > p > img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* تنسيق زر الحذف من السلة (Remove from Basket) */
+.checkoutProduct-info > button {
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  width: max-content; /* يجعل حجم الزر على مقاس النص فقط */
+  font-size: 13px;
+}
+
+.checkoutProduct-info > button:hover {
+  background: #ddb347;
+}

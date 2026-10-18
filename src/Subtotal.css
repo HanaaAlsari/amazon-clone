@@ -1,0 +1,55 @@
+/* الحاوية الرئيسية للمجموع الفرعي */
+.subtotal {
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عمودياً (النص ثم الهدية ثم الزر) */
+  justify-content: space-between;
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  background-color: #f3f3f3; /* خلفية رمادية فاتحة مميزة للصناديق الجانبية */
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+/* تنسيق نص المجموع الفرعي والعدد */
+.subtotal > p {
+  font-size: 18px;
+  color: #111;
+}
+
+/* قسم خيار الهدية (الـ Checkbox والنص المرافق له) */
+.subtotal_gift {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* إضافة مسافة صغيرة بين المربع الاختياري والنص */
+.subtotal_gift > input {
+  margin-right: 5px;
+}
+
+/* زر الانتقال إلى الدفع (Proceed to Checkout) */
+.subtotal > button {
+  background: #f0c14b; /* اللون الأصفر المميز لأمازون */
+  border-radius: 3px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* تأثير تمرير الفأرة على الزر */
+.subtotal > button:hover {
+  background: #ddb347; /* يصبح اللون أغمق قليلاً عند التمرير */
+}
+
+/* تأثير الضغط على الزر */
+.subtotal > button:active {
+  background: #c8a13c;
+}

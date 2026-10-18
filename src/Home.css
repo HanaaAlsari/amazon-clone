@@ -1,0 +1,55 @@
+/* الحاوية الرئيسية للصفحة */
+.home {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px; /* تحديد أقصى عرض للصفحة للحفاظ على المظهر الاحترافي */
+  background-color: #eaeded; /* الخلفية الرمادية الفاتحة المميزة لأمازون */
+}
+
+/* الحاوية الداخلية للترتيب */
+.home-container {
+  width: 100%;
+}
+
+/* تنسيق صورة البانر الرئيسية (الخلفية الكبيرة) */
+.home-image {
+  width: 100%;
+  
+  z-index: -1;
+  margin-bottom: -150px; /* سحب المنتجات للأعلى لتغطي أسفل الصورة وتصنع تدرجاً بصفة أمازون */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* تأثير تلاشي وشفافية لأسفل الصورة */
+  object-fit: cover;
+}
+
+/* تنسيق صفوف المنتجات */
+.home-row {
+  display: flex;
+  z-index: 1;
+
+  width: 100%;
+  justify-content: center; /* تمركز المنتجات في المنتصف */
+}
+
+/* تنسيق الحاوية الرئيسية التي تجمع العناصر الثلاثة */
+.home-row2 {
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+
+/* تنسيق متجاوب: يجعل المنتجات تترتب عمودياً في الشاشات الصغيرة وتوزيعها أفقياً في الشاشات الكبيرة */
+@media (max-width: 768px) {
+  .home-row {
+    flex-direction: column;
+  }
+  
+  .home-image {
+    margin-bottom: -50px; /* تقليل السحب في الشاشات الصغيرة لتجنب تداخل النصوص */
+  }
+}

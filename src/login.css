@@ -1,0 +1,113 @@
+/* الحاوية الخارجية الكاملة لصفحة تسجيل الدخول */
+.login {
+  background-color: #f6f6f6; /* خلفية رمادية خفيفة مثل أمازون الحقيقي */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* تنسيق شعار أمازون في الأعلى */
+.login-logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 100px;
+}
+
+/* الصندوق الأبيض الرئيسي في المنتصف */
+.login-container {
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 20px 30px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* عنوان Sign in الرئيسي */
+.login-container > h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #111;
+}
+
+/* العناوين الصغيرة فوق الحقول (Email / Password) */
+.login-container h5 {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #111;
+  font-weight: 700;
+}
+
+/* حقول الإدخال */
+.login-container form input {
+  height: 31px;
+  margin-bottom: 15px;
+  background-color: white;
+  width: 100%;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  padding: 0 7px;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.1s linear;
+}
+
+/* تأثير التحديد لحقول الإدخال عند الضغط عليها */
+.login-container form input:focus {
+  border: 1px solid #e77600;
+  box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+}
+
+/* زر تسجيل الدخول الأصفر (Sign in) */
+.login-signInBtn {
+  background: #f0c14b;
+  border-radius: 3px;
+  width: 100%;
+  height: 33px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.login-signInBtn:hover {
+  background: #ddb347;
+}
+
+/* نص الشروط والأحكام أسفل النموذج */
+.login-container > p {
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* زر إنشاء حساب جديد الرمادي (Create your Amazon Account) */
+.login-registerBtn {
+  background: #eff1f3;
+  border-radius: 3px;
+  width: 100%;
+  height: 33px;
+  border: 1px solid;
+  margin-top: 15px;
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.login-registerBtn:hover {
+  background: #e2e6ea;
+}
